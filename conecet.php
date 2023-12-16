@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "New record created successfully";
+      //  header("Location: http://localhost/sharks/contact.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
