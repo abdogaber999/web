@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#200016, #10001f);
+    height: 100vh;
+    font-family: system-ui;
+    /* هنا غيرا شكل الخط بتاع عنوان الصفحة واديتة حجم معقول */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    width: 95%;
+    /* السطرين دول عشان اخلي العناصر بتاعت الصفحة مظبوطة مع الصور */
+    z-index: 100;
+    /* عشان اخلي العناصر تظهر فوق الصور مش العكس */
+    display: flex;
+    /* عشان يفصلي الكلام عن العنوان عشان اعمل navbar */
+    justify-content: space-between;
+    /*عشان يجيبلي كل الكلام علي اليمين ويعمل مسافة في النص ويسيب عنوان الصفحه علي الشمال  */
+    align-items: center;
+    /* عشان انزل عنوان الصفحة تحت شوية */
+    margin: 30px;
+}
+
+header.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    /* عشان يبقي عنوان الصفحة كلة حروف كابيتال */
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* كل ده عشان اجيبهم جمب بعض وعلي سطر واحد */
+    list-style: none;
+    /* عشان اشيل النقط بتاعت الليست الي جمب كل كلمة  */
+}
+
+header ul li {
+    margin-right: 30px;
+    /* عشان افصل العناصر عن بعضها واسيب مسافة */
+
+}
+
+header ul li a {
+    padding: 6px 15px;
+    border-radius: 20px;
+    /* دول عشان لما اقف بالماوس علي اي عنصر الهالة البيضة الي هتظهر يكون شكلها بيضاوي وفي نفس الوقت كبير  */
+}
+
+header ul li a:hover,
+.active {
+    background: #fff;
+    color: #200016;
+    /* كده انا خليت لما اقف بالماوس علي اي عنصر يحصل التاثير ده وكمان لما افضل في الصفحة بتاعت الهوم يفضل التاثير موجود ميتشالش مش شرط ابقي واقف بالماوس بس  */
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* هنا عشان احط ابعاد منطقية للصور */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* عشان اظهر كلمة شاركس الي كتبتها في نص الصفحة  */
+    /* flexbox معلومة انا هنا بستخدم ال */
+    overflow: hidden;
+    /* خليته مخفي عشان وانا بعمل الانيميشن بتاعتي تبقي كل حاجة مظبوطة */
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, #200016, transparent);
+    /* هنا انا بظبط الالوان الي في اخر الصور عشان تبقي متداخلة مع باقي الصفحة الي تحت الي فيها الكلام */
+}
+
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* هنا انا بظبط ابعاد الصور عشان تبقي متداخله مع بعض ومظبوطة عالصفحة */
+
+}
+
+#moon {
+    mix-blend-mode: screen;
+    /* عشان احط تاثير للقمر الي في الصورة */
+    transform: translateY(80px)
+        /* هنا نزلت القمر شوية عشان يبقي عند الكلمة بظبط */
+}
+
+.Sharks {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-140px)
+        /* هنا عشان اظبط مكان الكلمة في نص الصفحة بظبط ولعتها فوق شوية عشان تبقي عند القمر */
+}
+
+.content {
+    color: #fff;
+    padding: 30px;
+}
+
+.content h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+
+.content p {
+    margin: 20px;
+}
